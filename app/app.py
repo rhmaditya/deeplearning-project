@@ -8,6 +8,8 @@ import string
 from nltk.tokenize import word_tokenize
 import nltk
 import os
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 
 nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
 if not os.path.exists(nltk_data_dir):
@@ -583,7 +585,7 @@ if submitted:
                     )
                     st.metric("Confidence", f"{conf:.2f}%")
                 with col2:
-                    st.plotly_chart(create_gauge_chart(conf, label), use_container_width=True)
+                    st.plotly_chart(create_gauge_chart(conf, label), width="stretch")
                 with st.expander("Lihat Hasil Preprocessing"):
                     st.text_area("Cleaned Text", cleaned, height=100, disabled=True)
 
