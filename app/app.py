@@ -587,15 +587,8 @@ if submitted:
                 with st.expander("Lihat Hasil Preprocessing"):
                     st.text_area("Cleaned Text", cleaned, height=100, disabled=True)
 
-                # Misal hasil preprocessing teks:
-                cleaned_text = " ".join([w for w in text.split() if w not in stopwords])  # atau hasil dari fungsi preprocessing Anda
-
-                # Tampilkan hasil prediksi
-                st.markdown(
-                    f"<div class='result-box'><h2 style='color: #e74c3c;'>🚨 HOAX</h2>"
-                    f"<p style='font-size:1.2em;'>Confidence: <b>92.5%</b></p></div>",
-                    unsafe_allow_html=True
-                )
+                # Gunakan hasil dari fungsi predict_news
+                cleaned_text = cleaned if cleaned else ""
 
                 # Tampilkan WordCloud
                 st.markdown("#### Visualisasi WordCloud dari Teks Berita")
