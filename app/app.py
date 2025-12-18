@@ -47,7 +47,7 @@ def model_has_text_vectorization(model):
 def load_models_and_vectorizer():
     try:
         # ✅ CRITICAL: Load EXACT same data yang digunakan saat training
-        clean_df = pd.read_parquet(r"d:\dataScience\tugas_besar\dl\clean_data.parquet")
+        clean_df = pd.read_parquet(r"clean_data.parquet")
         
         # ✅ Gunakan EXACT same split
         X_train = clean_df["combined_features"].sample(frac=0.7, random_state=42)
@@ -73,8 +73,8 @@ def load_models_and_vectorizer():
         models = {}
         model_info = {}
         model_files = {
-            "GRU (92.1%)": r"d:\dataScience\tugas_besar\dl\model\gru_model.keras",
-            "LSTM (91.3%)": r"d:\dataScience\tugas_besar\dl\model\lstm_model.keras",
+            "GRU (92.1%)": r"model/gru_model.keras",
+            "LSTM (91.3%)": r"model/lstm_model.keras",
         }
         
         for name, path in model_files.items():
