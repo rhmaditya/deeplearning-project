@@ -1,0 +1,11 @@
+text,true_label,predicted_label,probability,confidence,status,type
+VIRAL!!! Vaksin COVID Mengandung Chip 5G...,FAKE,FAKE,0.9823,0.9823,CORRECT,correct_high_conf
+Presiden Joko Widodo mengumumkan kebijakan baru...,REAL,REAL,0.0543,0.9457,CORRECT,correct_high_conf
+BREAKING: Gempa Dahsyat Guncang Jakarta...,REAL,FAKE,0.7234,0.7234,INCORRECT (FP),false_positive
+"Menurut penelitian Harvard, air kelapa sembuhkan kanker...",FAKE,REAL,0.3421,0.6579,INCORRECT (FN),false_negative
+Apple dikabarkan akan menghentikan iPhone 15...,FAKE,FAKE,0.5789,0.5789,CORRECT (Borderline),borderline
+Pemerintah umumkan WFH permanen untuk PNS...,FAKE,REAL,0.4123,0.5877,INCORRECT (Satire),satire_missed
+Bocoran! Calon Presiden X punya rekening offshore...,FAKE,FAKE,0.9567,0.9567,CORRECT,political_hoax
+Kebijakan PPN dinilai tidak tepat sasaran...,REAL,REAL,0.3892,0.6108,CORRECT (Low Conf),opinion_piece
+Dokter Wuhan: COVID sembuh dengan air jahe...,FAKE,FAKE,0.9912,0.9912,CORRECT,medical_hoax
+Google umumkan Gemini 2.0 dengan AI multimodal...,REAL,REAL,0.0234,0.9766,CORRECT,tech_news
