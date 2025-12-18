@@ -1,6 +1,6 @@
 streamlit
 tensorflow
-nltk
+nltk>=3.6
 pandas
 numpy
 plotly
