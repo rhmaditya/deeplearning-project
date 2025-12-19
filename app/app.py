@@ -257,7 +257,7 @@ def predict_news(text, title, model, text_vectorizer, has_built_in_vectorization
         raw_prob = float(prob)
         
         # ✅ Adjustable threshold
-        label = "HOAX" if raw_prob > threshold else "REAL"
+        label = "REAL" if raw_prob > threshold else "HOAX"
         conf = raw_prob if raw_prob > threshold else (1 - raw_prob)
         
         # Show probabilities
